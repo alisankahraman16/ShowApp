@@ -1,0 +1,32 @@
+﻿@model Show
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-asp-controller="Home" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="ShowTitle" class="form-label"></label>
+        <input asp-for="ShowTitle" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ShowGenre" class="form-label"></label>
+        <input asp-for="ShowGenre" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="ShowRate" class="form-label"></label>
+        <input asp-for="ShowRate" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Image" class="form-label"></label>
+        <input asp-for="Image" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label"></label>
+        <select asp-for="CategoryId" asp-items=" ViewBag.Categories" class="form-select">
+                <option value="0">All</option>
+        </select>
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
